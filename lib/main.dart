@@ -48,15 +48,22 @@ class _RandomColorState extends State<RandomColor> {
 
           onTap: () {
             setState(() {
-              if(currentPosition==_randomColorsList.length-1||currentPosition==_randomColorsList.length) {
-                _randomColorsList.addAll(List<Color>.generate(10, (i) => Color.fromRGBO(Random().nextInt(255), Random().nextInt(255), Random().nextInt(255), 100)));
-              }
-              if(firstStep) {
-                mainColor = _randomColorsList[currentPosition];
-                firstStep= false;
-              }
-              else
-                mainColor = _randomColorsList[++currentPosition];
+                if(currentPosition==_randomColorsList.length-1&&firstStep==false) {
+                  _randomColorsList.add(Color.fromRGBO(
+                      Random().nextInt(255), Random().nextInt(255),
+                      Random().nextInt(255), 100));
+                  mainColor = _randomColorsList[++currentPosition];
+                }
+                else {
+                  if(firstStep==false)
+                  mainColor = _randomColorsList[++currentPosition];
+                }
+                if(firstStep) {
+                  _randomColorsList.add(Colors.white);
+                  _randomColorsList.add(Color.fromRGBO(Random().nextInt(255), Random().nextInt(255), Random().nextInt(255),100));
+                  mainColor = _randomColorsList[++currentPosition];
+                  firstStep= false;
+                }
 
             });
           },
