@@ -1,16 +1,12 @@
-# fluttertestapp
-
-A new Flutter application.
+# My Flutter Test App
 
 ## Getting Started
 
-This project is a starting point for a Flutter application.
+I created a test application. 
+The application display the text "Hey there" in the middle of the screen and after tapping on the screen a background color be changed to a random color. 
+I also add other feature to the app: 
+-after double tapping on the screen a background color changed on the previous color (if that exists)
+-after a long press color be saved in a "Saved colors" list
 
-A few resources to get you started if this is your first Flutter project:
+Regardless of the test results, I want to thank you for the opportunity to spend the last three days with interest.
 
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
-
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
