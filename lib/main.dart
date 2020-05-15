@@ -59,12 +59,11 @@ class _RandomColorState extends State<RandomColor> {
                   mainColor = _randomColorsList[++currentPosition];
                 }
                 if(firstStep) {
-                  _randomColorsList.add(Colors.white);
-                  _randomColorsList.add(Color.fromRGBO(Random().nextInt(255), Random().nextInt(255), Random().nextInt(255),100));
+                  _randomColorsList.add(mainColor);
+                  _randomColorsList.add(Color.fromRGBO(Random().nextInt(256), Random().nextInt(256), Random().nextInt(256),100));
                   mainColor = _randomColorsList[++currentPosition];
                   firstStep= false;
                 }
-
             });
           },
 
